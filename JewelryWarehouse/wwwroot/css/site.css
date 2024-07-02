@@ -12,6 +12,18 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+.navbar {
+  background-color: #99ffcc !important;
+}
+
+.footer.border-top {
+  border-top: 1px solid #99ffcc !important;
+}
+
+.navbar.border-bottom {
+  border-bottom: 1px solid #99ffcc !important;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -19,4 +31,47 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #ccffcc;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+  margin: 0;
+}
+
+.site-logo {
+  max-height: 50px;
+  max-width: 125px;
+}
+
+.main-img-container{
+  position: relative;
+  
+  
+}
+.main-img-logo{
+  max-height: 200px;
+  max-width: 220px;
+}
+
+.text-bold-40{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.text-bold-20{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.text-regular-20{
+  font-size: 20px;
+}
+
+.text-regular-right-20{
+  font-size: 20px;
+  text-align: left;
 }

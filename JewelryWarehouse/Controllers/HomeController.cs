@@ -1,31 +1,24 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using JewelryWarehouse.Models;
+using Microsoft.Extensions.Localization;
 
-namespace JewelryWarehouse.Controllers;
-
-public class HomeController : Controller
+namespace JewelryWarehouse.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    public class HomeController : BaseController<HomeController>
     {
-        _logger = logger;
-    }
+        public HomeController(IStringLocalizer<HomeController> localizer) : base(localizer)
+        {
+        }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
+        public IActionResult Index()
+        {
+            SetViewData();
+            return View();
+        }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        public IActionResult Privacy()
+        {
+            SetViewData();
+            return View();
+        }
     }
 }

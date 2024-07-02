@@ -1,0 +1,21 @@
+﻿@model List<JewelryWarehouse.Models.Entity.Shop>
+
+<h2>Shops</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var shop in Model)
+    {
+        <tr>
+            <td>@shop.Name</td>
+            <td>@shop.Address.City, @shop.Address.Street</td>
+        </tr>
+    }
+    </tbody>
+</table>

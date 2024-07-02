@@ -6,4 +6,59 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.5.24306.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0-preview.5.24306.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-preview.5.24306.3">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\Controllers\HomeController.ru.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>HomeController.ru.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Controllers\HomeController.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>HomeController.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Menu\MenuLocalization.ru.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>MenuLocalization.ru.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Menu\MenuLocalization.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>MenuLocalization.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\Controllers\HomeController.ru.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Strings.ru.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Controllers\HomeController.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Strings.en.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Menu\MenuLocalization.ru.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>MenuLocalization.ru.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Menu\MenuLocalization.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>MenuLocalization.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>

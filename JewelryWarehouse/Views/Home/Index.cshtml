@@ -1,8 +1,31 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using JewelryWarehouse.Controllers
+@inject Microsoft.Extensions.Localization.IStringLocalizer<HomeController> localizer
+
+@{
+    ViewData["Title"] = localizer["HomePageTitle"];
+}
+
+@{
+    string companyName = "Natashkina Jewelry";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p class="text-bold-40">@localizer["WelcomeMessage"]</p>
+</div>
+
+<div class="text-center">
+    <p class="main-img-container">
+        <img src="~/img/ImgHome/Diamond.png" alt="Diamond Logo" class="main-img-logo"/>
+    </p>
+</div>
+
+<div class="text-center">
+    <p class="text-regular-20">
+        <b class="text-bold-20">@companyName</b> - @localizer["Description"]
+    </p>
+    <p class="text-bold-20">@localizer["AdvantagesTitle"]</p>
+    <p class="text-regular-right-20">- @localizer["UniqueDesigns"]</p>
+    <p class="text-regular-right-20">- @localizer["HighQualityMaterials"]</p>
+    <p class="text-regular-right-20">- @localizer["AttentionToDetail"]</p>
+    <p class="text-regular-right-20">- @localizer["PersonalizedApproach"]</p>
 </div>

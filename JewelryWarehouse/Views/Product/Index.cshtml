@@ -1,0 +1,37 @@
+﻿@model List<JewelryWarehouse.Models.Entity.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h2>Products</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Index" asp-route-sortOrder="price_asc">Sort by Price (Ascending)</a>
+    <a class="btn btn-primary" asp-action="Index" asp-route-sortOrder="price_desc">Sort by Price (Descending)</a>
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+            <td>
+                @foreach (var category in product.Categories)
+                {
+                    <span>@category.Name</span><br />
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
