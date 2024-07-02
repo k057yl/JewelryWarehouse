@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<JewelryWarehouse.Models.DTO.CartItemDTO>
+
+<h1>Shopping Cart</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.Quantity</td>
+            <td>@item.ProductPrice</td>
+            <td>@item.TotalPrice</td>
+            <td>
+                <a asp-action="RemoveFromCart" asp-route-productId="@item.ProductId">Remove</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="ClearCart">Clear Cart</a>

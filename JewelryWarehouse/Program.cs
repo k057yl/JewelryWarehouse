@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using JewelryWarehouse.Data;
+using JewelryWarehouse.Models.Entity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 
@@ -16,6 +17,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Add localization services
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
+builder.Services.AddDistributedMemoryCache();//*****************
+builder.Services.AddSession();//******************
+
+// Регистрация модели корзины
+builder.Services.AddSingleton<Cart>();//*****************
 
 builder.Services.AddControllersWithViews()
     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)

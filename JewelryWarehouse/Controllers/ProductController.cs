@@ -17,22 +17,21 @@ namespace JewelryWarehouse.Controllers
 
         public async Task<IActionResult> Index(string sortOrder)
         {
+            ViewData["PriceSortParm"] = String.IsNullOrEmpty(sortOrder) ? "price_desc" : "";
+        
             var products = from p in _context.Products.Include(p => p.Categories)
                 select p;
 
             switch (sortOrder)
             {
-                case "price_desc":
-                    products = products.OrderByDescending(p => p.Price);
-                    break;
                 case "price_asc":
                     products = products.OrderBy(p => p.Price);
                     break;
-                default:
-                    products = products.OrderBy(p => p.Name);
+                case "price_desc":
+                    products = products.OrderByDescending(p => p.Price);
                     break;
             }
-
+            
             SetViewData();
             return View(await products.AsNoTracking().ToListAsync());
         }

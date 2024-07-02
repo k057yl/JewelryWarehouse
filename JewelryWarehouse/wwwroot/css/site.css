@@ -75,3 +75,16 @@ body {
   font-size: 20px;
   text-align: left;
 }
+
+.nav-link {
+  color: #333333;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.nav-link:hover {
+  color: #000000 !important;
+  background-color: #99ccff;
+}

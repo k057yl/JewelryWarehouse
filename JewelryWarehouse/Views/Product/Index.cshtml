@@ -17,6 +17,7 @@
         <th>Name</th>
         <th>Price</th>
         <th>Categories</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -30,6 +31,9 @@
                 {
                     <span>@category.Name</span><br />
                 }
+            </td>
+            <td>
+                <a class="btn btn-success" asp-action="AddToCart" asp-controller="Cart" asp-route-productId="@product.Id">Add to Cart</a>
             </td>
         </tr>
     }
