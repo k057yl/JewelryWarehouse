@@ -105,7 +105,7 @@ namespace JewelryWarehouse.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Главная страница.
+        ///   Looks up a localized string similar to Home Page.
         /// </summary>
         internal static string HomePageTitle {
             get {
@@ -137,6 +137,15 @@ namespace JewelryWarehouse.Resources {
         internal static string Product {
             get {
                 return ResourceManager.GetString("Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return To Shopping.
+        /// </summary>
+        internal static string ReturnToShopping {
+            get {
+                return ResourceManager.GetString("ReturnToShopping", resourceCulture);
             }
         }
         

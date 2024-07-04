@@ -141,6 +141,15 @@ namespace JewelryWarehouse.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Вернуться к Покупкам.
+        /// </summary>
+        internal static string ReturnToShopping {
+            get {
+                return ResourceManager.GetString("ReturnToShopping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Магазин.
         /// </summary>
         internal static string Shop {

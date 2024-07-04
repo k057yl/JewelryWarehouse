@@ -51,6 +51,9 @@
     <data name="Warehouse" xml:space="preserve">
         <value>Склад</value>
     </data>
+    <data name="ReturnToShopping" xml:space="preserve">
+        <value>Вернуться к Покупкам</value>
+    </data>
     
     <data name="HomePageTitle" xml:space="preserve">
         <value>Главная страница</value>

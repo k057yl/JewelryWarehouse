@@ -4,6 +4,7 @@
     ViewData["Title"] = "Products";
 }
 
+
 <h2>Products</h2>
 
 <p>
@@ -33,7 +34,14 @@
                 }
             </td>
             <td>
-                <a class="btn btn-success" asp-action="AddToCart" asp-controller="Cart" asp-route-productId="@product.Id">Add to Cart</a>
+                <a class="btn btn-success" asp-action="AddToCart" asp-controller="Cart" asp-route-productId="@product.Id">
+                    <img src="~/img/Icons/add-icon.png" style="width: 24px; height: 24px;"/>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-success" asp-action="RemoveFromCart" asp-controller="Cart" asp-route-productId="@product.Id">
+                    <img src="~/img/Icons/remove-icon.png" style="width: 24px; height: 24px;"/>
+                </a>
             </td>
         </tr>
     }

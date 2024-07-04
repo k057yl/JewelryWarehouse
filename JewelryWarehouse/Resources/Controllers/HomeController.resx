@@ -51,9 +51,12 @@
     <data name="Warehouse" xml:space="preserve">
         <value>Warehouse</value>
     </data>
+    <data name="ReturnToShopping" xml:space="preserve">
+        <value>Return To Shopping</value>
+    </data>
     
     <data name="HomePageTitle" xml:space="preserve">
-        <value>Главная страница</value>
+        <value>Home Page</value>
     </data>
     <data name="WelcomeMessage" xml:space="preserve">
         <value>Welcome to "Natashkina Jewelry"!</value>
